@@ -1,5 +1,5 @@
 var input=""
-while(input !== "oui"){
+while(input !== "exit"){
 
 input = (prompt("Qu'est-ce-que tu me veux ?")) ;
 if(input.substr(input.length - 1) === "?"){
