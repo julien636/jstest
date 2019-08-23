@@ -25,6 +25,7 @@ entrepreneurs.forEach(n => {
   if (n.year<=1979 && n.year>1969){console.log(n.first+" "+n.last)}
 });
 
+
 console.log("Voici un array des noms et prénoms des entrepreuneurs:")
 var entrepreneursName=[]
 entrepreneurs.forEach(n => {
@@ -39,20 +40,5 @@ entrepreneurs.forEach(n => {
   console.log(n.first+" "+n.last+"aurait "+age+" ans aujourd'hui")
 });
 
-console.log(entrepreneurs.sort())
-
-function compare(a, b) {
-  // Use toUpperCase() to ignore character casing
-  const lastA = a.last.toUpperCase();
-  const lastB = b.last.toUpperCase();
-
-  let comparison = 0;
-  if (lastA &gt; lastB) {
-    comparison = 1;
-  } else if (lastA &lt; lastB) {
-    comparison = -1;
-  }
-  return comparison;
-}
-
-bands.sort(compare);
+console.log("Trie les entrepreneurs par ordre alphabétique du nom de famille.")
+console.log(entrepreneurs.sort((a,b) => (a.last > b.last) ? 1 : -1));
